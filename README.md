@@ -127,25 +127,27 @@ endmodule
 
 OUTPUT WAVEFORM:
 # ENCODER:
-![WhatsApp Image 2024-04-08 at 11 23 15 AM (1)](https://github.com/sabarezz/VLSI-LAB-EXP-2/assets/165630121/6bc783ea-91e7-4c15-8429-0ae21ec75f5d)
-
+![b769b511-f0cc-4063-8c61-9a2a1c143bb4](https://github.com/sabarezz/VLSI-LAB-EXP-2/assets/165630121/f7dbe56b-cd6c-4f96-bf73-86e9f86dedd0)
 
 
 # DECODER:
-![WhatsApp Image 2024-04-08 at 11 23 15 AM](https://github.com/sabarezz/VLSI-LAB-EXP-2/assets/165630121/0f1f04c1-a380-4630-86d5-6d7e2d72e82e)
+![27bd9d59-0858-4892-b08c-ac1c9a0cbe81](https://github.com/sabarezz/VLSI-LAB-EXP-2/assets/165630121/c015e6e0-47e0-4684-93ca-c8e0b2e62d2c)
+
 
 
 # MULTIPLEXER:
-![WhatsApp Image 2024-04-08 at 11 23 19 AM](https://github.com/sabarezz/VLSI-LAB-EXP-2/assets/165630121/5c3b1c31-d7c6-4556-8cf5-34017da25e56)
+![8b567d60-b372-4ec8-a799-80e84e74dcac](https://github.com/sabarezz/VLSI-LAB-EXP-2/assets/165630121/1cb729c5-6509-4c8d-8c9e-22df0f70e0ca)
+
 
 
 
 # DEMULTIPLEXER:
-![WhatsApp Image 2024-04-08 at 11 23 21 AM](https://github.com/sabarezz/VLSI-LAB-EXP-2/assets/165630121/f914fcd9-659f-454a-a952-5fabd32c6f53)
+![a536f267-b69b-49e3-97b9-203616750161](https://github.com/sabarezz/VLSI-LAB-EXP-2/assets/165630121/fae29574-eda8-482f-b427-462169ace810)
 
 
 # MAGNITUDE COMPARATOR:
-![WhatsApp Image 2024-04-08 at 11 23 23 AM](https://github.com/sabarezz/VLSI-LAB-EXP-2/assets/165630121/f7ec4558-d33c-49dd-b91e-f0a3ac32579c)
+![5523c173-d466-4e08-8d8f-772308ebaa71](https://github.com/sabarezz/VLSI-LAB-EXP-2/assets/165630121/c442630b-afe4-4112-b24e-b925149717e8)
+
 
 RESULT
 HENCE ENCODER, DECODER, MULTIPLEXER, DEMULTIPLEXER, MAGNITUDE COMPARATOR using Xilinx ISE is simulated and synthesised.
