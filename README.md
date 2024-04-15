@@ -127,26 +127,27 @@ endmodule
 
 OUTPUT WAVEFORM:
 # ENCODER:
-![b769b511-f0cc-4063-8c61-9a2a1c143bb4](https://github.com/sabarezz/VLSI-LAB-EXP-2/assets/165630121/f7dbe56b-cd6c-4f96-bf73-86e9f86dedd0)
+![image](https://github.com/sabarezz/VLSI-LAB-EXP-2/assets/165630121/67ce5087-cdc3-45c0-8a40-41ab71fdef07)
+
 
 
 # DECODER:
-![27bd9d59-0858-4892-b08c-ac1c9a0cbe81](https://github.com/sabarezz/VLSI-LAB-EXP-2/assets/165630121/c015e6e0-47e0-4684-93ca-c8e0b2e62d2c)
-
+![image](https://github.com/sabarezz/VLSI-LAB-EXP-2/assets/165630121/c1edcb4f-f4ed-4fba-87e3-6804f01a8ff4)
 
 
 # MULTIPLEXER:
-![8b567d60-b372-4ec8-a799-80e84e74dcac](https://github.com/sabarezz/VLSI-LAB-EXP-2/assets/165630121/1cb729c5-6509-4c8d-8c9e-22df0f70e0ca)
+![image](https://github.com/sabarezz/VLSI-LAB-EXP-2/assets/165630121/fbb5d6e6-8066-407b-bd6f-7132b7a69dc6)
 
 
 
 
 # DEMULTIPLEXER:
-![a536f267-b69b-49e3-97b9-203616750161](https://github.com/sabarezz/VLSI-LAB-EXP-2/assets/165630121/fae29574-eda8-482f-b427-462169ace810)
+![image](https://github.com/sabarezz/VLSI-LAB-EXP-2/assets/165630121/f13fab7b-46bd-4443-a909-375fb60b563c)
 
 
 # MAGNITUDE COMPARATOR:
-![5523c173-d466-4e08-8d8f-772308ebaa71](https://github.com/sabarezz/VLSI-LAB-EXP-2/assets/165630121/c442630b-afe4-4112-b24e-b925149717e8)
+![image](https://github.com/sabarezz/VLSI-LAB-EXP-2/assets/165630121/cb582334-c270-4b18-8cc7-a4d0b9047f5a)
+
 
 
 RESULT
