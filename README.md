@@ -49,12 +49,97 @@ STEP:10 Double click on the Implement Design and double click on the Generate Pr
 STEP:11  On the board, by giving required input, the LEDs starts to glow light, indicating the output.
 
 VERILOG CODE
-
-   <<< TYPE YOUR VERILOG CODE >>>
+#ENCODER:
+```
+module encoder(d,a,b,c);
+input [7:0]d;
+output a,b,c;
+or(a,d[4],d[5],d[6],d[7]);
+or(b,d[2],d[3],d[6],d[7]);
+or(c,d[1],d[3],d[5],d[7]);
+endmodule
+```
+#DECODER:
+```
+module decoder_8(a,b,c,y);
+input a,b,c; 
+output[7:0]y; 
+and gl(y[0],(~a),(~b),(~c)); 
+and g2(y[1],(~a),(~b),(c)); 
+and g3(y[2],(~a),(b),(~c));
+and g4(y[3],(~a),(b),(c));
+and g5(y[4],(a),(~b),(~c));
+and g6(y[5],(a), (~b), (c));
+and g7(y[6], (a), (b), (~c)); 
+and g8(y[7], (a), (b), (c));
+endmodule
+```
+#MULTIPLEXER:
+```
+module mux(a,b,c,d,s0,s1,y);
+input a,b,c,d,s0,s1;
+output y;
+assign y=s1 ?(s0?d:c):(s0?b:a);
+endmodule
+```
+#DEMULTIPLEXER:
+```
+module demux(in,s0,s1,s2,d0,d1,d2,d3,d4,d5,d6,d7);
+input in,s0,s1,s2;
+output d0,d1,d2,d3,d4,d5,d6,d7;
+assign d0=(in & ~s2 & ~s1 &~s0),
+d1=(in & ~s2 & ~s1 &s0),
+d2=(in & ~s2 & s1 &~s0),
+d3=(in & ~s2 & s1 &s0),
+d4=(in & s2 & ~s1 &~s0),
+d5=(in & s2 & ~s1 &s0),
+d6=(in & s2 & s1 &~s0),
+d7=(in & s2 & s1 &s0);
+endmodule
+```
+#MAGNITUDE COMPARATOR:
+```
+module magcomp(a,b,l,g,e);
+input [3:0]a,b;
+output reg l,g,e;
+always @(*)
+begin
+if(a>b)
+begin
+     l=1'b0;
+     g=1'b1;
+     e=1'b0;
+end
+else if(a<b)
+begin
+     l=1'b1;
+     g=1'b0;
+     e=1'b0;
+end
+else
+begin
+     l=1'b0;
+     g=1'b0;
+     e=1'b1;
+end
+end
+endmodule
+```
 
 OUTPUT WAVEFORM
- <<< PASTE YOUR OUTPUT WAVEFORM >>>
+ #ENCODER:
+ ![image](https://github.com/navaneethans/VLSI-LAB-EXP-2/assets/165630121/30224e2a-e6dd-428f-b989-8373040290ff)
+ #DECODER:
+ ![image](https://github.com/navaneethans/VLSI-LAB-EXP-2/assets/165630121/cbb9418d-066b-480b-b68f-257f166b03f0)
+ #MULTIPLEXER:
+ ![image](https://github.com/navaneethans/VLSI-LAB-EXP-2/assets/165630121/348e6296-36ab-44ba-bcec-daad94d7c102)
+ #DEMULTIPLEXER:
+ ![image](https://github.com/navaneethans/VLSI-LAB-EXP-2/assets/165630121/67afee44-ff55-47f6-9d0b-2710a737a92a)
+ #MAGNITUDE COMPARATOR:
+ ![image](https://github.com/navaneethans/VLSI-LAB-EXP-2/assets/165630121/e2e4e52e-c757-465d-b4a1-8fa9fa555cc7)
+
+
 
 RESULT
-
+Hence ENCODER, DECODER, MULTIPLEXER, DEMULTIPLEXER, MAGNITUDE COMPARATOR is stimulated and synthesised using Xilinx ISE.
 
