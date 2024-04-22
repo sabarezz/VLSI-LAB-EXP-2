@@ -76,24 +76,36 @@ endmodule
 ```
 # MULTIPLEXER:
 ```
-module mux(a,b,c,d,s0,s1,y);
-input a,b,c,d,s0,s1;
-output y;
-assign y=s1 ?(s0?d:c):(s0?b:a);
+verilog code 
+module mux(s,c,a);
+input [2:0]s;
+input [7:0]a;
+wire [7:0]w;
+output c;
+and(w[0],a[0],~s[2],~s[1],~s[0]);
+and(w[1],a[1],~s[2],~s[1],s[0]);
+and(w[2],a[2],~s[2],s[1],~s[0]);
+and(w[3],a[3],~s[2],s[1],s[0]);
+and(w[4],a[4],s[2],~s[1],~s[0]);
+and(w[5],a[5],s[2],~s[1],s[0]);
+and(w[6],a[6],s[2],s[1],~s[0]);
+and(w[7],a[7],s[2],s[1],s[0]);
+or (c,w[0],w[1],w[2],w[3],w[4],w[5],w[6],w[7]);
 endmodule
 ```
 # DEMULTIPLEXER:
-module demux(in,s0,s1,s2,d0,d1,d2,d3,d4,d5,d6,d7);
-input in,s0,s1,s2;
-output d0,d1,d2,d3,d4,d5,d6,d7;
-assign d0=(in & ~s2 & ~s1 &~s0),
-d1=(in & ~s2 & ~s1 &s0),
-d2=(in & ~s2 & s1 &~s0),
-d3=(in & ~s2 & s1 &s0),
-d4=(in & s2 & ~s1 &~s0),
-d5=(in & s2 & ~s1 &s0),
-d6=(in & s2 & s1 &~s0),
-d7=(in & s2 & s1 &s0);
+module demux_8(s,a,y);
+input [2:0]s;
+input a;
+output [7:0]y;
+and(y[0],a,~s[2],~s[1],~s[0]);
+and(y[1],a,~s[2],~s[1],s[0]);
+and(y[2],a,~s[2],s[1],~s[0]);
+and(y[3],a,~s[2],s[1],s[0]);
+and(y[4],a,s[2],~s[1],~s[0]);
+and(y[5],a,s[2],~s[1],s[0]);
+and(y[6],a,s[2],s[1],~s[0]);
+and(y[7],a,s[2],s[1],s[0]);
 endmodule
 ```
 # MAGNITUDE COMPARATOR:
@@ -127,26 +139,32 @@ endmodule
 
 OUTPUT WAVEFORM:
 # ENCODER:
-![image](https://github.com/sabarezz/VLSI-LAB-EXP-2/assets/165630121/67ce5087-cdc3-45c0-8a40-41ab71fdef07)
+
+![image](https://github.com/sabarezz/VLSI-LAB-EXP-2/assets/165630121/8dee1ce5-687b-478c-b682-6059bfa8705d)
 
 
 
 # DECODER:
-![image](https://github.com/sabarezz/VLSI-LAB-EXP-2/assets/165630121/c1edcb4f-f4ed-4fba-87e3-6804f01a8ff4)
+
+![image](https://github.com/sabarezz/VLSI-LAB-EXP-2/assets/165630121/8c36c1b4-3a6e-4d09-8cce-4fe8ddb9ed33)
 
 
 # MULTIPLEXER:
-![image](https://github.com/sabarezz/VLSI-LAB-EXP-2/assets/165630121/fbb5d6e6-8066-407b-bd6f-7132b7a69dc6)
+
+![image](https://github.com/sabarezz/VLSI-LAB-EXP-2/assets/165630121/70c0ff73-c1d1-4014-a9a0-8926b9c8a264)
 
 
 
 
 # DEMULTIPLEXER:
-![image](https://github.com/sabarezz/VLSI-LAB-EXP-2/assets/165630121/f13fab7b-46bd-4443-a909-375fb60b563c)
+
+![image](https://github.com/sabarezz/VLSI-LAB-EXP-2/assets/165630121/06bea170-162b-46b7-ba7b-1cd04bad8eba)
+
 
 
 # MAGNITUDE COMPARATOR:
-![image](https://github.com/sabarezz/VLSI-LAB-EXP-2/assets/165630121/cb582334-c270-4b18-8cc7-a4d0b9047f5a)
+
+![image](https://github.com/sabarezz/VLSI-LAB-EXP-2/assets/165630121/85ba5c35-ed4a-47eb-9f77-71d8f8b85bf5)
 
 
 
